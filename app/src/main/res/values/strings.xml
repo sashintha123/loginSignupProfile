@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">login_Register_Profile</string>
+    <string name="new_user_signup">New User ? <b>SignUp</b></string>
+</resources>

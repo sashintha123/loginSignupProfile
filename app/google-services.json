@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "209079089871",
+    "project_id": "brigdeapp",
+    "storage_bucket": "brigdeapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:209079089871:android:3fd5f4e7a8073d9e2f15ba",
+        "android_client_info": {
+          "package_name": "com.example.login_register_profile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "209079089871-o0kiscbi5d1e5bojin33jpj2t39o5uvo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVFyCozt9BX-rUgK51X_GKhAscwoYEL9c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "209079089871-o0kiscbi5d1e5bojin33jpj2t39o5uvo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
