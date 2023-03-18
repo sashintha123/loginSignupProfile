@@ -7,12 +7,12 @@ import com.example.login_register_profile.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding:ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
 
         //handle click ,login
         binding.loginBtn.setOnClickListener {
@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this,DashboardUserActivity::class.java))
 
         }
+
 
 
 

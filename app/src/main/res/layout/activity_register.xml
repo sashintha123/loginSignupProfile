@@ -40,6 +40,7 @@
             android:fontFamily="sans-serif-condensed"
             android:textSize="28sp"
             android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
 
         <ScrollView
             android:layout_width="match_parent"
@@ -106,7 +107,7 @@
                     android:id="@+id/passwordTil"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/passwordTil"
+                    android:layout_below="@id/emailTil"
                     android:layout_marginTop="5dp"
                     app:passwordToggleEnabled="true"
                     app:hintEnabled="false">
@@ -132,7 +133,7 @@
                     android:id="@+id/cPasswordTil"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/emailTil"
+                    android:layout_below="@id/passwordTil"
                     android:layout_marginTop="5dp"
                     app:passwordToggleEnabled="true"
                     app:hintEnabled="false">
@@ -157,7 +158,7 @@
                 <Button
                     android:id="@+id/registerBtn"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_below="@id/cPasswordTil"
                     android:layout_marginTop="20dp"
                      android:background="@drawable/shape_button01"
@@ -167,6 +168,6 @@
 
             </RelativeLayout>
         </ScrollView>
-    </RelativeLayout>
+
 
 </RelativeLayout>
