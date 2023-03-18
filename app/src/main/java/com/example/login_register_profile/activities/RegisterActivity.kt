@@ -1,4 +1,4 @@
-package com.example.login_register_profile
+package com.example.login_register_profile.activities
 
 import android.app.ProgressDialog
 import android.content.Intent
@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import com.example.login_register_profile.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
@@ -157,7 +156,7 @@ class RegisterActivity : AppCompatActivity() {
                 //user info saved, open user dashboard
                 progressDialog.dismiss()
                 Toast.makeText(this,"Account created...",Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this@RegisterActivity,DashboardUserActivity::class.java))
+                startActivity(Intent(this@RegisterActivity, DashboardUserActivity::class.java))
                 finish()
 
 

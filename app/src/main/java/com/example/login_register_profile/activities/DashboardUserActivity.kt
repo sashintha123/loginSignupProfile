@@ -1,8 +1,9 @@
- package com.example.login_register_profile
+ package com.example.login_register_profile.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.example.login_register_profile.databinding.ActivityDashboardUserBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -28,11 +29,19 @@ import com.google.firebase.auth.FirebaseAuth
         //handel click , logout
         binding.logoutBtn.setOnClickListener{
                 firebaseAuth.signOut()
-                startActivity(Intent(this,MainActivity::class.java))
+                startActivity(Intent(this, MainActivity::class.java))
                 finish()
             }
 
+        //handele click open profile
+        binding.profileBtn.setOnClickListener {
+            startActivity(Intent(this,ProfileActivity::class.java))
+        }
+
     }
+
+     //this activity can be opened with or without login , so hide logout and profile button when user not logged in
+
 
      private fun checkUser() {
 
@@ -43,6 +52,10 @@ import com.google.firebase.auth.FirebaseAuth
 
              //not logged in ,user can stay in userdashboard without login too
              binding.subTitleTv.text="Not Logged In"
+
+             //hide profile ,logout
+             binding.profileBtn.visibility = View.GONE
+             binding.logoutBtn.visibility = View.GONE
          }
 
          else{
@@ -51,6 +64,10 @@ import com.google.firebase.auth.FirebaseAuth
 
              //set to text view of toolbar
              binding.subTitleTv.text = email
+
+             //show profile ,logout
+             binding.profileBtn.visibility = View.VISIBLE
+             binding.logoutBtn.visibility = View.VISIBLE
 
          }
      }
