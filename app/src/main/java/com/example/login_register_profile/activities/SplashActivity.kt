@@ -1,9 +1,10 @@
-package com.example.login_register_profile
+package com.example.login_register_profile.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.example.login_register_profile.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -36,7 +37,7 @@ class SplashActivity : AppCompatActivity() {
         if(firebaseUser == null){
 
             //user not logged in , goto main screen
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
 
@@ -59,14 +60,14 @@ class SplashActivity : AppCompatActivity() {
                         if(userType == "user"){
 
                             //customer
-                            startActivity(Intent(this@SplashActivity,DashboardUserActivity::class.java))
+                            startActivity(Intent(this@SplashActivity, DashboardUserActivity::class.java))
                             finish()
 
                         }
 
                         else if(userType == "seller"){
 
-                            startActivity(Intent(this@SplashActivity,DashboardSellerActivity::class.java))
+                            startActivity(Intent(this@SplashActivity, DashboardSellerActivity::class.java))
                             finish()
 
                         }

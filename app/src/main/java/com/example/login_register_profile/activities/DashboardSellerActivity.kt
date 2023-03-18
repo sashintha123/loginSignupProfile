@@ -1,4 +1,4 @@
-package com.example.login_register_profile
+package com.example.login_register_profile.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -29,6 +29,14 @@ class DashboardSellerActivity : AppCompatActivity() {
             firebaseAuth.signOut()
             checkUser()
         }
+
+        //handele click open profile
+        binding.profileBtn.setOnClickListener {
+            startActivity(Intent(this,ProfileActivity::class.java))
+        }
+
+
+
     }
 
     private fun checkUser() {
@@ -38,7 +46,7 @@ class DashboardSellerActivity : AppCompatActivity() {
         if(firebaseUser == null){
 
             //not logged in go to main screen
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
 

@@ -1,4 +1,4 @@
-package com.example.login_register_profile
+package com.example.login_register_profile.activities
 
 import android.app.ProgressDialog
 import android.content.Intent
@@ -41,7 +41,7 @@ class LoginActivity : AppCompatActivity() {
         //handel click , not  have account , goto register screen
         binding.noAccountTv.setOnClickListener {
 
-            startActivity(Intent(this,RegisterActivity::class.java))
+            startActivity(Intent(this, RegisterActivity::class.java))
         }
 
         //handel click, begin login
@@ -130,14 +130,14 @@ class LoginActivity : AppCompatActivity() {
                     if(userType == "user"){
 
                         //customer
-                        startActivity(Intent(this@LoginActivity,DashboardUserActivity::class.java))
+                        startActivity(Intent(this@LoginActivity, DashboardUserActivity::class.java))
                         finish()
 
                     }
 
                     else if(userType == "seller"){
 
-                        startActivity(Intent(this@LoginActivity,DashboardSellerActivity::class.java))
+                        startActivity(Intent(this@LoginActivity, DashboardSellerActivity::class.java))
                         finish()
 
                     }
